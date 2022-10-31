@@ -55,7 +55,7 @@ namespace PersonajeMovil
         }
         private void FinalizarPartida()
         {
-            Creditos credito = new Creditos();
+            var credito = new Creditos();
             
         }
         private void Mover(Personaje jugador,Laberinto laberinto)
