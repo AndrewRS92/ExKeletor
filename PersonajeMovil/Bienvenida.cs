@@ -11,10 +11,16 @@ namespace PersonajeMovil
         public bool Salir { get; set; }
         public void Lanzar()
         {
-            Console.WriteLine("Bienvenido a EXXkeletor. Pulse Intro para jugar y escape para salir");
-            ConsoleKeyInfo tecla = Console.ReadKey();
+            ConsoleKeyInfo tecla;
+            do
+            {
+                Console.WriteLine("Bienvenido a EXXkeletor. Pulse Intro para jugar y escape para salir");
+                tecla = Console.ReadKey();
+                Console.Clear();
+            }
+            while (tecla.Key != ConsoleKey.Enter && tecla.Key != ConsoleKey.Escape);
+
             Salir = tecla.Key == ConsoleKey.Escape;
-            Console.Clear();
         }
 
         public bool GetSalir()

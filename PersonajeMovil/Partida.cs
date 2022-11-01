@@ -51,12 +51,13 @@ namespace PersonajeMovil
                 fichero.Close();
 
             }
-
         }
         private void FinalizarPartida()
         {
             var credito = new Creditos();
-            
+            Console.WriteLine("Pulsa cualquier tecla para continuar");
+            Console.ReadKey();
+            Console.Clear();
         }
         private void Mover(Personaje jugador,Laberinto laberinto)
         {
